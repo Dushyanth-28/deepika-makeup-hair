@@ -11,14 +11,53 @@ import AboutPage from './pages/AboutPage';
 import BookingPage from './pages/BookingPage';
 
 export type Page = 'home' | 'portfolio' | 'services' | 'transformations' | 'about' | 'book';
+export type Theme = 'light' | 'dark';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
+  const [theme, setTheme] = useState<Theme>(() => {
+    return (localStorage.getItem('theme') as Theme) || 'dark';
+  });
+
+  // Theme effect
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  // Scroll Reveal Observer Effect
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const timeoutId = setTimeout(() => {
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, [currentPage]);
 
   // Scroll to top on page change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentPage]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+  };
 
   const renderPage = () => {
     switch (currentPage) {
@@ -33,8 +72,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-darkBg text-white font-sans">
-      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
+    <div className="relative min-h-screen bg-white dark:bg-darkBg text-darkBg dark:text-white font-sans theme-transition overflow-x-hidden">
+      <Navbar 
+        currentPage={currentPage} 
+        onNavigate={setCurrentPage} 
+        theme={theme} 
+        toggleTheme={toggleTheme} 
+      />
       <main className="pt-16 md:pt-20">
         {renderPage()}
       </main>

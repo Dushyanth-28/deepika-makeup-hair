@@ -15,14 +15,15 @@ export interface Transformation {
   description: string;
   beforeImage: string;
   afterImage: string;
-  category: 'Bridal' | 'Reception' | 'Editorial' | 'Party';
+  category: 'Bridal' | 'Reception' | 'Editorial' | 'Corporate' | 'Professional';
 }
 
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: 'Bridal' | 'Reception' | 'Editorial' | 'Sangeet';
+  category: 'Bridal' | 'Party' | 'Corporate' | 'Editorial';
   imageUrl: string;
+  description: string;
   location?: string;
 }
 
