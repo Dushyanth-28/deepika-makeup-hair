@@ -9,12 +9,14 @@ import ServicesPage from './pages/ServicesPage';
 import TransformationsPage from './pages/TransformationsPage';
 import AboutPage from './pages/AboutPage';
 import BookingPage from './pages/BookingPage';
+import { PortfolioItem } from './types';
 
 export type Page = 'home' | 'portfolio' | 'services' | 'transformations' | 'about' | 'book';
 export type Theme = 'light' | 'dark';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
+  const [selectedLook, setSelectedLook] = useState<PortfolioItem | null>(null);
   const [theme, setTheme] = useState<Theme>(() => {
     return (localStorage.getItem('theme') as Theme) || 'dark';
   });
@@ -59,15 +61,27 @@ const App: React.FC = () => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
 
+  const handleBookLook = (look: PortfolioItem) => {
+    setSelectedLook(look);
+    setCurrentPage('book');
+  };
+
+  const handleNavigate = (page: Page) => {
+    if (page !== 'book') {
+      setSelectedLook(null);
+    }
+    setCurrentPage(page);
+  };
+
   const renderPage = () => {
     switch (currentPage) {
-      case 'home': return <Home onNavigate={setCurrentPage} />;
-      case 'portfolio': return <PortfolioPage />;
-      case 'services': return <ServicesPage onNavigate={setCurrentPage} />;
+      case 'home': return <Home onNavigate={handleNavigate} />;
+      case 'portfolio': return <PortfolioPage onBookLook={handleBookLook} />;
+      case 'services': return <ServicesPage onNavigate={handleNavigate} />;
       case 'transformations': return <TransformationsPage />;
-      case 'about': return <AboutPage onNavigate={setCurrentPage} />;
-      case 'book': return <BookingPage />;
-      default: return <Home onNavigate={setCurrentPage} />;
+      case 'about': return <AboutPage onNavigate={handleNavigate} />;
+      case 'book': return <BookingPage selectedLook={selectedLook} onClearLook={() => setSelectedLook(null)} />;
+      default: return <Home onNavigate={handleNavigate} />;
     }
   };
 
@@ -75,14 +89,14 @@ const App: React.FC = () => {
     <div className="relative min-h-screen bg-white dark:bg-darkBg text-darkBg dark:text-white font-sans theme-transition overflow-x-hidden">
       <Navbar 
         currentPage={currentPage} 
-        onNavigate={setCurrentPage} 
+        onNavigate={handleNavigate} 
         theme={theme} 
         toggleTheme={toggleTheme} 
       />
       <main className="pt-16 md:pt-20">
         {renderPage()}
       </main>
-      <Footer onNavigate={setCurrentPage} />
+      <Footer onNavigate={handleNavigate} />
       <WhatsAppFAB />
     </div>
   );

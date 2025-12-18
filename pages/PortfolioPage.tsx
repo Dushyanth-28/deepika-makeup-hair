@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import { PORTFOLIO } from '../constants';
 import { PortfolioItem } from '../types';
 
-const PortfolioPage: React.FC = () => {
+interface PortfolioPageProps {
+  onBookLook?: (look: PortfolioItem) => void;
+}
+
+const PortfolioPage: React.FC<PortfolioPageProps> = ({ onBookLook }) => {
   const [filter, setFilter] = useState('All');
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   
@@ -81,7 +85,7 @@ const PortfolioPage: React.FC = () => {
               <span className="material-symbols-outlined">close</span>
             </button>
             
-            <div className="w-full md:w-1/2 h-64 md:h-auto">
+            <div className="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
               <img src={selectedItem.imageUrl} alt={selectedItem.title} className="w-full h-full object-cover" />
             </div>
             
@@ -101,10 +105,13 @@ const PortfolioPage: React.FC = () => {
               </div>
               
               <div className="mt-12 flex flex-col sm:flex-row gap-4">
-                <button className="flex-1 py-4 bg-primary text-white font-bold rounded-2xl shadow-lg shadow-primary/20 hover:bg-secondary transition-all">
+                <button 
+                  onClick={() => onBookLook && onBookLook(selectedItem)}
+                  className="flex-1 py-4 bg-primary text-white font-bold rounded-2xl shadow-lg shadow-primary/20 hover:bg-secondary transition-all uppercase tracking-widest text-sm"
+                >
                   Book Similar Look
                 </button>
-                <button className="flex-1 py-4 border border-gray-200 dark:border-white/10 text-darkBg dark:text-white font-bold rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all">
+                <button className="flex-1 py-4 border border-gray-200 dark:border-white/10 text-darkBg dark:text-white font-bold rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-all uppercase tracking-widest text-sm">
                   Share Artistry
                 </button>
               </div>

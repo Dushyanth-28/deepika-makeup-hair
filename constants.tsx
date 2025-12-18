@@ -43,27 +43,27 @@ export const SERVICES: Service[] = [
 export const TRANSFORMATIONS: Transformation[] = [
   {
     id: 't1',
-    title: 'Royal Indian Bride',
-    description: 'Traditional heritage makeup with deep kohl eyes and radiant gold skin-work.',
+    title: 'Traditional Red Heritage',
+    description: 'A complete traditional bridal makeover featuring bold kohl-rimmed eyes, a classic red bindi, and precision-contoured skin for high-definition photography.',
     beforeImage: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=1000&auto=format&fit=crop',
+    afterImage: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000&auto=format&fit=crop',
     category: 'Bridal'
   },
   {
     id: 't2',
-    title: 'Corporate Polished',
-    description: 'Enhancing professional features with a clean, confident, and long-lasting matte finish.',
+    title: 'Golden Royal Muhurtham',
+    description: 'Focusing on a luminous "lit-from-within" glow paired with traditional gold temple jewelry and a sophisticated warm-toned eye shadow palette.',
     beforeImage: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop',
-    category: 'Corporate'
+    afterImage: 'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=1000&auto=format&fit=crop',
+    category: 'Bridal'
   },
   {
     id: 't3',
-    title: 'Editorial High Fashion',
-    description: 'Avant-garde skin-prep and bold color application for runway-ready results.',
+    title: 'Minimalist North Indian Reception',
+    description: 'A contemporary take on bridal glam featuring soft cut-crease eye work, nude lips, and airbrushed skin for a lightweight feel.',
     beforeImage: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1000&auto=format&fit=crop',
-    category: 'Editorial'
+    afterImage: 'https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=1000&auto=format&fit=crop',
+    category: 'Reception'
   }
 ];
 
@@ -77,12 +77,12 @@ export const PORTFOLIO: PortfolioItem[] = [
     imageUrl: 'https://images.unsplash.com/photo-1610030469614-46c592398555?q=80&w=1000&auto=format&fit=crop'
   },
   {
-    id: 'p5',
-    title: 'North Indian Royal',
+    id: 'p2',
+    title: 'Golden Hour Muhurtham',
     category: 'Bridal',
-    location: 'Umaid Bhawan, Jodhpur',
-    description: 'A regal pastel look with heavy contouring and bold kohl eyes.',
-    imageUrl: 'https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=1000&auto=format&fit=crop'
+    location: 'Lalit Ashok, Bangalore',
+    description: 'Warm gold tones paired with a traditional silk saree. Focus on glowing, sun-kissed skin.',
+    imageUrl: 'https://images.unsplash.com/photo-1603968700000-68334057881c?q=80&w=1000&auto=format&fit=crop'
   },
   {
     id: 'p3',
@@ -93,9 +93,58 @@ export const PORTFOLIO: PortfolioItem[] = [
     imageUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1000&auto=format&fit=crop'
   },
   {
+    id: 'p4',
+    title: 'Vibrant Sangeet Glow',
+    category: 'Party',
+    location: 'The Oberoi, Bangalore',
+    description: 'Breathable, sweat-resistant festive makeup with a pops of jewel-toned eyeliner.',
+    imageUrl: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p5',
+    title: 'North Indian Royal',
+    category: 'Bridal',
+    location: 'Umaid Bhawan, Jodhpur',
+    description: 'A regal pastel look with heavy contouring and bold kohl eyes.',
+    imageUrl: 'https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p6',
+    title: 'Editorial Edge',
+    category: 'Editorial',
+    location: 'Vogue India Shoot',
+    description: 'Experimental editorial work featuring wet-look skin and sharp, graphic liner.',
+    imageUrl: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p7',
+    title: 'Modern Minimalist Bride',
+    category: 'Bridal',
+    location: 'Destination - Goa',
+    description: 'Dewy skin and nude lips for a beach-side sunset wedding. Effortlessly chic.',
+    imageUrl: 'https://images.unsplash.com/photo-1591154133230-0708688ca057?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p8',
+    title: 'High-Fashion Portrait',
+    category: 'Editorial',
+    location: 'Elle Magazine Shoot',
+    description: 'Soft focus textures and monochromatic tones for high-fashion digital portraiture.',
+    imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p9',
+    title: 'Evening Cocktail Glam',
+    category: 'Party',
+    location: 'ITC Gardenia',
+    description: 'Dramatic smokey eyes and a bold oxblood lip. Perfect for high-end gala evenings.',
+    imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
     id: 'p10',
     title: 'Executive Presence',
     category: 'Corporate',
+    location: 'EGL Business Park',
     description: 'Minimalist but impactful. Precision sculpting for high-level meetings.',
     imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop'
   },
@@ -103,6 +152,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     id: 'p11',
     title: 'Leadership Headshot',
     category: 'Corporate',
+    location: 'Manyata Tech Park',
     description: 'Matte-finish skin-work optimized for professional studio lighting.',
     imageUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop'
   },
@@ -110,8 +160,41 @@ export const PORTFOLIO: PortfolioItem[] = [
     id: 'p12',
     title: 'Gala Night Leadership',
     category: 'Corporate',
+    location: 'JW Marriott, Bangalore',
     description: 'An elevated professional look featuring a soft winged liner.',
     imageUrl: 'https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p13',
+    title: 'Timeless Temple Bride',
+    category: 'Bridal',
+    location: 'Mysore Palace',
+    description: 'Classic South Indian bridal look with bold red lips and traditional gold jewelry.',
+    imageUrl: 'https://images.unsplash.com/photo-1615214592453-22872659e99a?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p14',
+    title: 'Editorial Glow',
+    category: 'Editorial',
+    location: 'Studio Session',
+    description: 'Hyper-realistic skin texture focus. Minimal makeup, maximum impact.',
+    imageUrl: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p15',
+    title: 'Starlight Reception',
+    category: 'Party',
+    location: 'Conrad Bangalore',
+    description: 'Glitter cut-crease eye makeup and satin skin for a festive evening celebration.',
+    imageUrl: 'https://images.unsplash.com/photo-1588117260148-b47818741c74?q=80&w=1000&auto=format&fit=crop'
+  },
+  {
+    id: 'p16',
+    title: 'Professional Profile',
+    category: 'Corporate',
+    location: 'Whitefield',
+    description: 'Natural, clean, and confident. A polished look for corporate headshots.',
+    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop'
   }
 ];
 
