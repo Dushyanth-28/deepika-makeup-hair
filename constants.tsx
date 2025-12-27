@@ -4,65 +4,83 @@ import { Service, Transformation, PortfolioItem, Testimonial, VideoTestimonial }
 export const SERVICES: Service[] = [
   {
     id: 's1',
-    title: 'Royal Bridal Signature',
-    description: 'Our flagship transformation for the modern Indian bride. Includes multi-day consultations, trial session, and on-day luxury styling.',
+    title: 'Bridal Makeup',
+    description: 'Custom bridal makeup for your big day. Includes trial and styling.',
     icon: 'diamond',
-    price: 'Starts at ₹25,000',
-    features: ['HD Airbrush Foundation', 'Jewelry Styling & Draping', 'Premium Mink Lashes', 'Skin Prep Mask Session'],
-    imageUrl: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1000&auto=format&fit=crop'
+    price: 'Consult for Price',
+    features: ['HD/Airbrush Makeup', 'Jewelry Styling', 'Premium Lashes', 'Skin Prep'],
+    imageUrl: '/assets/instagram/insta_9.jpg'
   },
   {
     id: 's2',
-    title: 'Party & Festive Glam',
-    description: 'Sophisticated cocktail and reception looks focusing on jewel tones, smokey eyes, and long-wear precision contouring.',
+    title: 'Hairstyling',
+    description: 'Hairstyling for all occasions. Buns, waves, and more.',
     icon: 'celebration',
-    price: 'Starts at ₹12,000',
-    features: ['Hollywood Waves Styling', 'Strobe & Highlight Finish', 'Waterproof Precision Liner', 'Festive Glitter Application'],
-    imageUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop'
+    price: 'Consult for Price',
+    features: ['Bridal Updos', 'Extensions Styling', 'Floral Accessories', 'Long-lasting Hold'],
+    imageUrl: '/assets/instagram/insta_14.jpg'
   },
   {
     id: 's3',
-    title: 'Fashion Editorial',
-    description: 'High-concept makeup for brand campaigns, magazine editorials, and professional portfolio shoots.',
-    icon: 'camera_alt',
-    price: 'Starts at ₹18,000 / day',
-    features: ['Avant-Garde Textures', 'On-set Retouching', 'Concept Collaboration', 'Photography Lighting Optimization'],
-    imageUrl: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000&auto=format&fit=crop'
+    title: 'Nail Art',
+    description: 'Beautiful nail art. Gel, acrylic, and custom designs.',
+    icon: 'brush',
+    price: 'Consult for Price',
+    features: ['Gel Polish', 'Nail Extensions', 'Bridal Nail Art', 'Manicure'],
+    imageUrl: '/assets/instagram/insta_15.jpg'
   },
   {
     id: 's4',
-    title: 'Corporate Professional',
-    description: 'Subtle, polished makeup for high-profile business meetings, speaker events, and professional headshots.',
-    icon: 'work',
-    price: 'Starts at ₹6,500',
-    features: ['Minimalist Professional Look', 'Matte Finish Skin', 'Natural Lip Tones', 'Anti-Glare for Video'],
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop'
+    title: 'Academy Courses',
+    description: 'Makeup and hair courses for beginners and pros.',
+    icon: 'school',
+    price: 'Consult for Price',
+    features: ['Certification', 'Hands-on Practice', 'Product Knowledge', 'Business Guidance'],
+    imageUrl: '/assets/instagram/insta_18.jpg'
+  },
+  {
+    id: 's5',
+    title: 'Lash Extensions',
+    description: 'Semi-permanent lash extensions. Classic and volume styles.',
+    icon: 'visibility',
+    price: 'Consult for Price',
+    features: ['Custom Lengths', 'Natural Look', 'Volume Sets', 'Safe Application'],
+    imageUrl: '/assets/instagram/insta_13.jpg'
+  },
+  {
+    id: 's6',
+    title: 'Hair Refixing',
+    description: 'Hair refixing to add volume and style.',
+    icon: 'content_cut',
+    price: 'Consult for Price',
+    features: ['Volume Restoration', 'Style Correction', 'Damage Assessment', 'Expert Care'],
+    imageUrl: '/assets/instagram/insta_19.jpg'
   }
 ];
 
 export const TRANSFORMATIONS: Transformation[] = [
   {
     id: 't1',
-    title: 'Traditional Red Heritage',
-    description: 'A complete traditional bridal makeover featuring bold kohl-rimmed eyes, a classic red bindi, and precision-contoured skin for high-definition photography.',
-    beforeImage: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1000&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000&auto=format&fit=crop',
+    title: 'Traditional Bridal',
+    description: 'Traditional bridal look with bold accents.',
+    beforeImage: 'https://images.unsplash.com/photo-1693362029321-eb86dc114bc4?fm=jpg&q=60&w=800&auto=format&fit=crop',
+    afterImage: '/assets/instagram/insta_9.jpg',
     category: 'Bridal'
   },
   {
     id: 't2',
-    title: 'Golden Royal Muhurtham',
-    description: 'Focusing on a luminous "lit-from-within" glow paired with traditional gold temple jewelry and a sophisticated warm-toned eye shadow palette.',
-    beforeImage: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=1000&auto=format&fit=crop',
+    title: 'Reception Glam',
+    description: 'Glamorous reception look with glowing skin.',
+    beforeImage: 'https://images.unsplash.com/photo-1686294589996-0d1657b86df7?fm=jpg&q=60&w=800&auto=format&fit=crop',
+    afterImage: '/assets/instagram/insta_13.jpg',
     category: 'Bridal'
   },
   {
     id: 't3',
-    title: 'Minimalist North Indian Reception',
-    description: 'A contemporary take on bridal glam featuring soft cut-crease eye work, nude lips, and airbrushed skin for a lightweight feel.',
-    beforeImage: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop',
-    afterImage: 'https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=1000&auto=format&fit=crop',
+    title: 'Party Makeover',
+    description: 'Modern look for parties.',
+    beforeImage: 'https://images.unsplash.com/photo-1688828028702-55d50a360f6f?fm=jpg&q=60&w=800&auto=format&fit=crop',
+    afterImage: '/assets/instagram/insta_10.jpg',
     category: 'Reception'
   }
 ];
@@ -70,156 +88,124 @@ export const TRANSFORMATIONS: Transformation[] = [
 export const PORTFOLIO: PortfolioItem[] = [
   {
     id: 'p1',
-    title: 'Heritage Silk Bride',
+    title: 'Royal Bridal',
     category: 'Bridal',
-    location: 'Taj West End, Bangalore',
-    description: 'A deep red traditional look using authentic Kanjeevaram styling and antique temple jewelry.',
-    imageUrl: 'https://images.unsplash.com/photo-1610030469614-46c592398555?q=80&w=1000&auto=format&fit=crop'
+    location: 'Bangalore',
+    description: 'Traditional bridal makeup.',
+    imageUrl: '/assets/instagram/insta_9.jpg'
   },
   {
     id: 'p2',
-    title: 'Golden Hour Muhurtham',
+    title: 'Golden Glow',
     category: 'Bridal',
-    location: 'Lalit Ashok, Bangalore',
-    description: 'Warm gold tones paired with a traditional silk saree. Focus on glowing, sun-kissed skin.',
-    imageUrl: 'https://images.unsplash.com/photo-1603968700000-68334057881c?q=80&w=1000&auto=format&fit=crop'
+    location: 'Bangalore',
+    description: 'Glowing skin for Muhurtham.',
+    imageUrl: '/assets/instagram/insta_10.jpg'
   },
   {
     id: 'p3',
-    title: 'Rose Gold Reception',
-    category: 'Party',
-    location: 'Leela Palace',
-    description: 'Soft-glam with shimmering rose-gold lids and a voluminous Hollywood wave.',
-    imageUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1000&auto=format&fit=crop'
+    title: 'Classic Red',
+    category: 'Bridal',
+    location: 'Bangalore',
+    description: 'Classic red bridal look.',
+    imageUrl: '/assets/instagram/insta_11.jpg'
   },
   {
     id: 'p4',
-    title: 'Vibrant Sangeet Glow',
-    category: 'Party',
-    location: 'The Oberoi, Bangalore',
-    description: 'Breathable, sweat-resistant festive makeup with a pops of jewel-toned eyeliner.',
-    imageUrl: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1000&auto=format&fit=crop'
+    title: 'South Indian Bride',
+    category: 'Bridal',
+    location: 'Chennai',
+    description: 'South Indian bridal makeup.',
+    imageUrl: '/assets/instagram/insta_12.jpg'
   },
   {
     id: 'p5',
-    title: 'North Indian Royal',
-    category: 'Bridal',
-    location: 'Umaid Bhawan, Jodhpur',
-    description: 'A regal pastel look with heavy contouring and bold kohl eyes.',
-    imageUrl: 'https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=1000&auto=format&fit=crop'
+    title: 'Reception Elegance',
+    category: 'Party',
+    location: 'Bangalore',
+    description: 'Elegant evening look.',
+    imageUrl: '/assets/instagram/insta_13.jpg'
   },
   {
     id: 'p6',
-    title: 'Editorial Edge',
-    category: 'Editorial',
-    location: 'Vogue India Shoot',
-    description: 'Experimental editorial work featuring wet-look skin and sharp, graphic liner.',
-    imageUrl: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000&auto=format&fit=crop'
+    title: 'Sangeet Vibes',
+    category: 'Party',
+    location: 'Bangalore',
+    description: 'Festive Sangeet makeup.',
+    imageUrl: '/assets/instagram/insta_14.jpg'
   },
   {
     id: 'p7',
-    title: 'Modern Minimalist Bride',
-    category: 'Bridal',
-    location: 'Destination - Goa',
-    description: 'Dewy skin and nude lips for a beach-side sunset wedding. Effortlessly chic.',
-    imageUrl: 'https://images.unsplash.com/photo-1591154133230-0708688ca057?q=80&w=1000&auto=format&fit=crop'
+    title: 'Glam Night',
+    category: 'Party',
+    location: 'Mumbai',
+    description: 'Glamorous party makeup.',
+    imageUrl: '/assets/instagram/insta_15.jpg'
   },
   {
     id: 'p8',
-    title: 'High-Fashion Portrait',
-    category: 'Editorial',
-    location: 'Elle Magazine Shoot',
-    description: 'Soft focus textures and monochromatic tones for high-fashion digital portraiture.',
-    imageUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop'
+    title: 'Corporate Headshot',
+    category: 'Corporate',
+    location: 'Bangalore',
+    description: 'Professional corporate makeup.',
+    imageUrl: '/assets/instagram/insta_16.jpg'
   },
   {
     id: 'p9',
-    title: 'Evening Cocktail Glam',
-    category: 'Party',
-    location: 'ITC Gardenia',
-    description: 'Dramatic smokey eyes and a bold oxblood lip. Perfect for high-end gala evenings.',
-    imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop'
+    title: 'Business Event',
+    category: 'Corporate',
+    location: 'Hyderabad',
+    description: 'Subtle business look.',
+    imageUrl: '/assets/instagram/insta_17.jpg'
   },
   {
     id: 'p10',
-    title: 'Executive Presence',
-    category: 'Corporate',
-    location: 'EGL Business Park',
-    description: 'Minimalist but impactful. Precision sculpting for high-level meetings.',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop'
+    title: 'Editorial Shoot',
+    category: 'Editorial',
+    location: 'Studio',
+    description: 'Creative editorial makeup.',
+    imageUrl: '/assets/instagram/insta_18.jpg'
   },
   {
     id: 'p11',
-    title: 'Leadership Headshot',
-    category: 'Corporate',
-    location: 'Manyata Tech Park',
-    description: 'Matte-finish skin-work optimized for professional studio lighting.',
-    imageUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop'
+    title: 'Fashion Week',
+    category: 'Editorial',
+    location: 'Bangalore',
+    description: 'Bold runway makeup.',
+    imageUrl: '/assets/instagram/insta_19.jpg'
   },
   {
     id: 'p12',
-    title: 'Gala Night Leadership',
-    category: 'Corporate',
-    location: 'JW Marriott, Bangalore',
-    description: 'An elevated professional look featuring a soft winged liner.',
-    imageUrl: 'https://images.unsplash.com/photo-1589156191108-c762ff4b96ab?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: 'p13',
-    title: 'Timeless Temple Bride',
-    category: 'Bridal',
-    location: 'Mysore Palace',
-    description: 'Classic South Indian bridal look with bold red lips and traditional gold jewelry.',
-    imageUrl: 'https://images.unsplash.com/photo-1615214592453-22872659e99a?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: 'p14',
-    title: 'Editorial Glow',
+    title: 'Creative Avant-Garde',
     category: 'Editorial',
-    location: 'Studio Session',
-    description: 'Hyper-realistic skin texture focus. Minimal makeup, maximum impact.',
-    imageUrl: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: 'p15',
-    title: 'Starlight Reception',
-    category: 'Party',
-    location: 'Conrad Bangalore',
-    description: 'Glitter cut-crease eye makeup and satin skin for a festive evening celebration.',
-    imageUrl: 'https://images.unsplash.com/photo-1588117260148-b47818741c74?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: 'p16',
-    title: 'Professional Profile',
-    category: 'Corporate',
-    location: 'Whitefield',
-    description: 'Natural, clean, and confident. A polished look for corporate headshots.',
-    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1000&auto=format&fit=crop'
+    location: 'Studio',
+    description: 'Avant-garde makeup.',
+    imageUrl: '/assets/instagram/insta_20.jpg'
   }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'test1',
-    name: 'Priya Iyer',
+    name: 'Happy Bride',
     role: 'Bridal Client',
-    content: "Anjali truly understands South Indian skin tones. My muhurtham makeup was so lightweight and natural. She is a magician!",
+    content: "Deepika made me look like a dream on my wedding day. Her expertise is unmatched!",
     avatarUrl: 'https://images.unsplash.com/photo-1484186139897-d5fc6b908812?q=80&w=200&auto=format&fit=crop',
     rating: 5
   },
   {
     id: 'test2',
-    name: 'Aditi Verma',
-    role: 'Fashion Designer',
-    content: "As a designer, I'm very picky about the aesthetic. Anjali's work on our last lookbook was impeccable.",
+    name: 'Student',
+    role: 'Academy Graduate',
+    content: "Learning at Deepika Makeup Academy was the best decision for my career. The hands-on training is excellent.",
     avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
     rating: 5
   },
   {
     id: 'test3',
-    name: 'Deepika Rao',
-    role: 'Corporate Leader',
-    content: "Needed a clean, powerful look for my TEDx talk. Anjali delivered a professional style that felt like 'me' but elevated.",
+    name: 'Corporate Client',
+    role: 'Professional',
+    content: "Professional, punctual, and highly skilled. Highly recommend for any event.",
     avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop',
     rating: 5
   }
@@ -228,37 +214,37 @@ export const TESTIMONIALS: Testimonial[] = [
 export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
   {
     id: 'vt1',
-    name: 'Megha S.',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-beautiful-woman-smiling-at-the-camera-4061-large.mp4',
+    name: 'Client Stories',
+    videoUrl: 'https://assets.mixkit.co/videos/33511/33511-360.mp4',
     thumbnailUrl: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=500&auto=format&fit=crop',
-    shortQuote: 'My wedding look was exactly how I dreamed it!'
+    shortQuote: 'Best makeup artist in Bangalore!'
   },
   {
     id: 'vt2',
-    name: 'Riya Kapoor',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-girl-with-blue-eyes-smiling-at-camera-3211-large.mp4',
+    name: 'Student Experience',
+    videoUrl: 'https://assets.mixkit.co/videos/1215/1215-360.mp4',
     thumbnailUrl: 'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=500&auto=format&fit=crop',
-    shortQuote: 'Anjali is the best for editorial glam. Five stars!'
+    shortQuote: 'Learned so much at the academy.'
   },
   {
     id: 'vt3',
-    name: 'Sanya Mirza',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-smiling-at-the-camera-4361-large.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=500&auto=format&fit=crop',
-    shortQuote: 'The HD finish stayed for 16 hours straight.'
+    name: 'Bridal Glow',
+    videoUrl: 'https://assets.mixkit.co/videos/1296/1296-360.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1583994038308-466368d37449?q=80&w=500&auto=format&fit=crop',
+    shortQuote: 'Felt like a princess!'
   },
   {
     id: 'vt4',
-    name: 'Ananya Roy',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-fashion-portrait-of-a-woman-in-a-studio-setting-4202-large.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=500&auto=format&fit=crop',
-    shortQuote: 'Simply flawless. Best investment for my big day.'
+    name: 'Party Ready',
+    videoUrl: 'https://assets.mixkit.co/videos/1221/1221-360.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=500&auto=format&fit=crop',
+    shortQuote: 'Amazing party look.'
   },
   {
     id: 'vt5',
-    name: 'Sneha Jain',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-young-woman-with-smiling-face-3243-large.mp4',
-    thumbnailUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=500&auto=format&fit=crop',
-    shortQuote: 'The studio vibe is so premium and relaxing.'
+    name: 'Natural Finish',
+    videoUrl: 'https://assets.mixkit.co/videos/33431/33431-360.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=500&auto=format&fit=crop',
+    shortQuote: 'So natural and flawless.'
   }
 ];

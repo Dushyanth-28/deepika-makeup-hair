@@ -3,9 +3,9 @@ import React from 'react';
 
 const WhatsAppFAB: React.FC = () => {
   return (
-    <a 
-      href="https://wa.me/1234567890?text=Hi%20Anjali,%20I'd%20like%20to%20book%20a%20makeover!" 
-      target="_blank" 
+    <a
+      href="https://wa.me/919113585961?text=Hi%20Deepika,%20I'd%20like%20to%20book%20a%20makeover!"
+      target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-8 right-8 z-[60] size-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform shadow-green-500/30 group"
       aria-label="Contact on WhatsApp"

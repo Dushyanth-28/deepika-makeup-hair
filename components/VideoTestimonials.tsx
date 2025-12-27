@@ -19,19 +19,19 @@ const VideoTestimonials: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="reveal reveal-up flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
           <div className="max-w-xl text-left">
-            <h4 className="text-primary font-black uppercase tracking-[0.4em] text-sm mb-6">Real Experiences</h4>
+            <h4 className="text-primary font-black uppercase tracking-[0.4em] text-sm mb-6">Client Love</h4>
             <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tighter leading-none">
-              MUSE <span className="text-primary italic font-serif">Stories</span>
+              HAPPY <span className="text-primary italic font-serif">Brides</span>
             </h2>
           </div>
           <div className="flex gap-4">
-            <button 
+            <button
               onClick={() => scroll('left')}
               className="size-14 rounded-full border border-gray-200 dark:border-white/20 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
             >
               <span className="material-symbols-outlined">arrow_back</span>
             </button>
-            <button 
+            <button
               onClick={() => scroll('right')}
               className="size-14 rounded-full border border-gray-200 dark:border-white/20 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
             >
@@ -40,22 +40,22 @@ const VideoTestimonials: React.FC = () => {
           </div>
         </div>
 
-        <div 
+        <div
           ref={scrollRef}
           className="flex gap-8 overflow-x-auto pb-12 hide-scrollbar snap-x snap-mandatory px-2 md:px-0"
         >
           {VIDEO_TESTIMONIALS.map((vt, i) => (
-            <div 
+            <div
               key={vt.id}
               className="reveal reveal-up snap-center shrink-0 w-[280px] md:w-[320px] aspect-[9/16] bg-white dark:bg-surface rounded-[2.5rem] overflow-hidden relative shadow-xl hover:shadow-2xl transition-all group border border-gray-100 dark:border-white/5"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {activeVideo === vt.id ? (
-                <video 
-                  src={vt.videoUrl} 
-                  autoPlay 
-                  loop 
-                  muted 
+                <video
+                  src={vt.videoUrl}
+                  autoPlay
+                  loop
+                  muted
                   playsInline
                   className="w-full h-full object-cover"
                 />
@@ -63,7 +63,7 @@ const VideoTestimonials: React.FC = () => {
                 <div className="relative w-full h-full">
                   <img src={vt.thumbnailUrl} alt={vt.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors"></div>
-                  <button 
+                  <button
                     onClick={() => setActiveVideo(vt.id)}
                     className="absolute inset-0 flex items-center justify-center text-white"
                   >
@@ -77,15 +77,15 @@ const VideoTestimonials: React.FC = () => {
               {/* Info Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black via-black/40 to-transparent text-white pointer-events-none">
                 <div className="flex items-center gap-2 mb-2">
-                   <div className="size-8 rounded-full border-2 border-primary bg-primary/20 flex items-center justify-center overflow-hidden">
-                      <img src={vt.thumbnailUrl} className="w-full h-full object-cover" alt="" />
-                   </div>
-                   <span className="font-bold text-sm tracking-wide">{vt.name}</span>
+                  <div className="size-8 rounded-full border-2 border-primary bg-primary/20 flex items-center justify-center overflow-hidden">
+                    <img src={vt.thumbnailUrl} className="w-full h-full object-cover" alt="" />
+                  </div>
+                  <span className="font-bold text-sm tracking-wide">{vt.name}</span>
                 </div>
                 <p className="text-sm font-medium leading-relaxed italic opacity-90">"{vt.shortQuote}"</p>
                 <div className="mt-4 flex gap-4 text-xs font-black uppercase tracking-widest text-primary">
-                   <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">favorite</span> 1.2k</span>
-                   <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">comment</span> 84</span>
+                  <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">favorite</span> 1.2k</span>
+                  <span className="flex items-center gap-1"><span className="material-symbols-outlined text-sm">comment</span> 84</span>
                 </div>
               </div>
 

@@ -16,10 +16,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <div className="flex items-center justify-center size-8 rounded-full bg-primary/10 text-primary">
                 <span className="material-symbols-outlined text-xl">brush</span>
               </div>
-              <span className="text-xl font-black italic text-white uppercase tracking-tighter">Urban Chic</span>
+              <span className="text-xl font-black italic text-white uppercase tracking-tighter">Deepika Makeup & Hair</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Elevating the beauty standards of Bangalore with professional artistry and bespoke transformations for every occasion.
+              Crafting Beauty, Redefining The Elegance. Best makeup studio and academy in Bangalore.
             </p>
             <div className="flex gap-4">
               {['instagram', 'facebook', 'youtube'].map((social) => (
@@ -35,12 +35,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-4">
               {[
                 { label: 'The Gallery', val: 'portfolio' },
-                { label: 'Our Experiences', val: 'services' },
+                { label: 'Our Services', val: 'services' },
                 { label: 'Transformations', val: 'transformations' },
-                { label: 'About Anjali', val: 'about' }
+                { label: 'About Deepika', val: 'about' }
               ].map(link => (
                 <li key={link.val}>
-                  <button 
+                  <button
                     onClick={() => onNavigate(link.val as Page)}
                     className="text-gray-400 hover:text-primary transition-colors text-sm"
                   >
@@ -56,15 +56,15 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary">call</span>
-                +91 98765 43210
+                +91 91 135 859 61
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary">mail</span>
-                hello@glowbyanjali.com
+                owner@deepikamakeupandhair.com
               </li>
               <li className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary">location_on</span>
-                <span>Indiranagar Studio,<br />Bangalore, KA 560038</span>
+                <span>Indira Nagar 1st Stage,<br />Bengaluru, KA 560038</span>
               </li>
             </ul>
           </div>
@@ -72,10 +72,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div>
             <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-6">Booking Status</h4>
             <div className="p-4 bg-primary/5 border border-primary/20 rounded-2xl mb-4">
-               <p className="text-xs text-primary font-bold mb-1 uppercase tracking-widest">Bridal Slots</p>
-               <p className="text-sm text-gray-300">Wedding Season '24: <span className="text-white font-bold">80% Full</span></p>
+              <p className="text-xs text-primary font-bold mb-1 uppercase tracking-widest">Bridal Slots</p>
+              <p className="text-sm text-gray-300">Wedding Season '24: <span className="text-white font-bold">80% Full</span></p>
             </div>
-            <button 
+            <button
               onClick={() => onNavigate('book')}
               className="w-full bg-primary hover:bg-secondary text-white font-bold py-3 rounded-xl transition-all uppercase text-xs tracking-widest"
             >
@@ -85,7 +85,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-xs font-medium tracking-widest uppercase">
-          <p>© 2024 GLOW BY ANJALI ARTISTRY. ALL RIGHTS RESERVED.</p>
+          <p>© 2024 DEEPIKA MAKEUP & HAIR. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

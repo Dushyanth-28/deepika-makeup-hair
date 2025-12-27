@@ -24,10 +24,10 @@ const BookingPage: React.FC<BookingPageProps> = ({ selectedLook, onClearLook }) 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Construct the WhatsApp Message
     const selectedService = SERVICES.find(s => s.id === formData.serviceId);
-    let waMessage = `Hi Anjali! I'd like to book a session. 
+    let waMessage = `Hi Deepika! I'd like to book a session. 
 Name: ${formData.name}
 Phone: ${formData.phone}
 Service: ${selectedService?.title}
@@ -40,7 +40,7 @@ Message: ${formData.message}`;
     }
 
     const encodedMessage = encodeURIComponent(waMessage);
-    const waUrl = `https://wa.me/919876543210?text=${encodedMessage}`; // Replace with actual business number
+    const waUrl = `https://wa.me/919113585961?text=${encodedMessage}`; // Replace with actual business number
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -66,7 +66,7 @@ Message: ${formData.message}`;
           <p className="text-gray-600 dark:text-gray-400 text-lg mb-8">
             Thank you, {formData.name.split(' ')[0]}. We've opened WhatsApp for you to finalize the details.
           </p>
-          <button 
+          <button
             onClick={() => window.location.href = '/'}
             className="px-10 py-4 bg-primary hover:bg-secondary text-white font-bold rounded-2xl transition-all shadow-lg uppercase tracking-widest text-sm"
           >
@@ -95,7 +95,7 @@ Message: ${formData.message}`;
               <h3 className="text-2xl font-black text-darkBg dark:text-white mb-2">{selectedLook.title}</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 italic">"{selectedLook.description}"</p>
             </div>
-            <button 
+            <button
               onClick={onClearLook}
               className="px-6 py-2 border border-primary/20 text-primary rounded-full text-xs font-black uppercase tracking-widest hover:bg-primary/10 transition-all"
             >
@@ -108,14 +108,14 @@ Message: ${formData.message}`;
           <div className="absolute top-0 right-0 p-8 opacity-5 dark:opacity-10 pointer-events-none">
             <span className="material-symbols-outlined text-9xl">auto_fix_high</span>
           </div>
-          
+
           <form onSubmit={handleSubmit} className="space-y-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
               <div className="space-y-4">
                 <label className="text-xs font-black uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 ml-1">What's your name?</label>
                 <input required name="name" value={formData.name} onChange={handleInputChange} className="w-full bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-white/10 rounded-2xl p-5 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-darkBg dark:text-white font-medium" placeholder="Ex: Priya Sharma" />
               </div>
-              
+
               <div className="space-y-4">
                 <label className="text-xs font-black uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 ml-1">Contact Number</label>
                 <input required name="phone" value={formData.phone} onChange={handleInputChange} className="w-full bg-gray-50 dark:bg-darkBg border border-gray-200 dark:border-white/10 rounded-2xl p-5 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-darkBg dark:text-white font-medium" placeholder="+91 98XXX XXXXX" />

@@ -21,7 +21,7 @@ export interface Transformation {
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: 'Bridal' | 'Party' | 'Corporate' | 'Editorial';
+  category: 'Bridal' | 'Party' | 'Corporate' | 'Editorial' | 'Academy';
   imageUrl: string;
   description: string;
   location?: string;
