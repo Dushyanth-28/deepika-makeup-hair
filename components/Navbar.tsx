@@ -38,8 +38,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, theme, toggleT
           className="flex items-center gap-2 group cursor-pointer"
           onClick={() => onNavigate('home')}
         >
-          <div className="flex items-center justify-center size-10 rounded-full bg-primary/10 text-primary transition-transform group-hover:scale-110">
-            <span className="material-symbols-outlined text-2xl font-bold">brush</span>
+          <div className="flex items-center justify-center size-10 rounded-full bg-white/10 backdrop-blur-sm transition-transform group-hover:scale-110 overflow-hidden">
+            <img
+              src="https://deepikamakeupandhair.com/wp-content/uploads/2024/04/Group-93-1.png"
+              alt="Deepika Makeup & Hair Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
           <span className="text-xl font-black tracking-tighter uppercase italic text-gray-900 dark:text-white">
             Deepika Makeup & Hair
@@ -64,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, theme, toggleT
             onClick={toggleTheme}
             className={`p-2 rounded-full transition-colors flex items-center justify-center ${isScrolled
               ? 'bg-gray-100 dark:bg-surface text-gray-800 dark:text-yellow-400'
-              : 'bg-white/20 text-white'
+              : 'bg-black/5 dark:bg-white/20 text-gray-900 dark:text-white'
               }`}
             aria-label="Toggle Theme"
           >
@@ -109,6 +113,21 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, theme, toggleT
                 {item.label}
               </button>
             ))}
+
+            {/* Mobile Theme Toggle */}
+            <button
+              onClick={() => {
+                toggleTheme();
+                // Don't close menu so user can see the change
+              }}
+              className="flex items-center justify-between py-3 text-lg font-black uppercase tracking-widest text-gray-900 dark:text-white border-b border-gray-100 dark:border-white/5"
+            >
+              <span>{isLight ? 'Dark Mode' : 'Light Mode'}</span>
+              <span className="material-symbols-outlined text-2xl">
+                {isLight ? 'dark_mode' : 'light_mode'}
+              </span>
+            </button>
+
             <button
               onClick={() => {
                 onNavigate('book');

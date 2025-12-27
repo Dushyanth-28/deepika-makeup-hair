@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +8,11 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -30,9 +34,15 @@
     }
   </script>
   <style>
-    .hide-scrollbar::-webkit-scrollbar { display: none; }
-    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     .reveal {
       opacity: 0;
       transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -43,16 +53,27 @@
       transform: translateY(0) translateX(0) scale(1);
     }
 
-    .reveal-up { transform: translateY(60px); }
-    .reveal-left { transform: translateX(-60px); }
-    .reveal-right { transform: translateX(60px); }
-    .reveal-scale { transform: scale(0.9); }
+    .reveal-up {
+      transform: translateY(60px);
+    }
+
+    .reveal-left {
+      transform: translateX(-60px);
+    }
+
+    .reveal-right {
+      transform: translateX(60px);
+    }
+
+    .reveal-scale {
+      transform: scale(0.9);
+    }
 
     ::selection {
       background-color: #ec136d;
       color: white;
     }
-    
+
     body {
       overflow-x: hidden;
     }
@@ -66,7 +87,7 @@
       -webkit-backdrop-filter: blur(16px);
     }
   </style>
-<script type="importmap">
+  <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
@@ -78,8 +99,10 @@
 }
 </script>
 </head>
+
 <body class="bg-white dark:bg-darkBg text-darkBg dark:text-white theme-transition">
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

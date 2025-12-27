@@ -8,7 +8,15 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % 4);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -27,6 +35,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       className="relative min-h-[95vh] md:min-h-screen w-full flex flex-col overflow-hidden"
     >
       {/* Parallax Background */}
+      {/* Parallax Background & Slideshow */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -34,13 +43,24 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           transition: 'transform 0.4s cubic-bezier(0.1, 0, 0, 1)'
         }}
       >
-        {/* Overlay for Contrast - Essential for Light Mode Visibility */}
+        {/* Overlay for Contrast */}
         <div className="absolute inset-0 bg-black/50 dark:bg-black/70 z-10 transition-colors duration-500"></div>
-        <img
-          src="/assets/images/image_1.jpg"
-          alt="Luxury Indian Bridal Makeup"
-          className="w-full h-full object-cover object-[center_25%]"
-        />
+
+        {/* Slideshow Images */}
+        {[
+          'https://images.unsplash.com/photo-1673413350047-ea5c0fd58c9e?fm=jpg&q=80&w=2000&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1673413347895-9664451e701e?fm=jpg&q=80&w=2000&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1665960212519-adcbb5e2ca03?fm=jpg&q=80&w=2000&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1760613130027-3959a3eb939c?fm=jpg&q=80&w=2000&auto=format&fit=crop'
+        ].map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`Luxury Indian Bridal Makeup ${index + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover object-[center_25%] transition-opacity duration-1000 ease-in-out ${currentImageIndex === index ? 'opacity-100' : 'opacity-0'
+              }`}
+          />
+        ))}
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full flex-grow flex flex-col justify-center">

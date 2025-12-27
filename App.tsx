@@ -18,7 +18,7 @@ const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>('home');
   const [selectedLook, setSelectedLook] = useState<PortfolioItem | null>(null);
   const [theme, setTheme] = useState<Theme>(() => {
-    return (localStorage.getItem('theme') as Theme) || 'dark';
+    return (localStorage.getItem('theme') as Theme) || 'light';
   });
 
   // Theme effect
@@ -87,11 +87,11 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen bg-white dark:bg-darkBg text-darkBg dark:text-white font-sans theme-transition overflow-x-hidden">
-      <Navbar 
-        currentPage={currentPage} 
-        onNavigate={handleNavigate} 
-        theme={theme} 
-        toggleTheme={toggleTheme} 
+      <Navbar
+        currentPage={currentPage}
+        onNavigate={handleNavigate}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
       <main className="pt-16 md:pt-20">
         {renderPage()}
