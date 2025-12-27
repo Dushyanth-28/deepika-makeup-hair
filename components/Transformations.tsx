@@ -14,19 +14,19 @@ const Transformations: React.FC = () => {
   const t = TRANSFORMATIONS[0]; // Spotlight the first one
 
   return (
-    <section id="transformations" className="py-32 bg-gray-50 dark:bg-surface transition-colors duration-500 overflow-hidden">
+    <section id="transformations" className="py-12 md:py-32 bg-gray-50 dark:bg-surface transition-colors duration-500 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
-          <div className="w-full lg:w-1/2 reveal reveal-left">
-            <h4 className="text-primary font-black uppercase tracking-[0.4em] text-sm mb-6">Before & After</h4>
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white leading-[0.9] tracking-tighter mb-10">
+        <div className="flex flex-col lg:flex-row gap-10 md:gap-20 items-center">
+          <div className="w-full lg:w-1/2 reveal reveal-left text-center lg:text-left">
+            <h4 className="text-primary font-black uppercase tracking-[0.4em] text-xs md:text-sm mb-4 md:mb-6">Before & After</h4>
+            <h2 className="text-4xl md:text-7xl font-black text-gray-900 dark:text-white leading-[0.9] tracking-tighter mb-6 md:mb-10">
               REAL <br /> <span className="text-primary italic font-serif font-normal">Transformations</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-12">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8 md:mb-12">
               See the difference with our natural, long-lasting makeup.
             </p>
 
-            <div className="space-y-6">
+            <div className="hidden md:block space-y-6">
               {[
                 { label: 'Technique', val: 'HD & Airbrush', icon: 'auto_fix_high' },
                 { label: 'Skin', val: 'Natural Finish', icon: 'face' },

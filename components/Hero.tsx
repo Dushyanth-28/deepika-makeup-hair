@@ -20,6 +20,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
+      if (window.innerWidth < 768) return; // Disable parallax on mobile
       const { innerWidth, innerHeight } = window;
       const x = (e.clientX - innerWidth / 2) / 40;
       const y = (e.clientY - innerHeight / 2) / 40;

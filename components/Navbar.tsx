@@ -38,16 +38,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, theme, toggleT
           className="flex items-center gap-2 group cursor-pointer"
           onClick={() => onNavigate('home')}
         >
-          <div className="flex items-center justify-center size-10 rounded-full bg-white/10 backdrop-blur-sm transition-transform group-hover:scale-110 overflow-hidden">
+          <div className="flex items-center justify-center h-14 w-auto transition-transform group-hover:scale-105">
             <img
               src="https://deepikamakeupandhair.com/wp-content/uploads/2024/04/Group-93-1.png"
               alt="Deepika Makeup & Hair Logo"
               className="w-full h-full object-contain"
             />
           </div>
-          <span className="text-xl font-black tracking-tighter uppercase italic text-gray-900 dark:text-white">
-            Deepika Makeup & Hair
-          </span>
         </div>
 
         <div className="hidden md:flex items-center gap-8">

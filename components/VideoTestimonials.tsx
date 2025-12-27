@@ -15,12 +15,12 @@ const VideoTestimonials: React.FC = () => {
   };
 
   return (
-    <section className="py-32 bg-gray-50 dark:bg-darkBg transition-colors overflow-hidden border-t border-gray-100 dark:border-white/5">
+    <section className="py-12 md:py-32 bg-gray-50 dark:bg-darkBg transition-colors overflow-hidden border-t border-gray-100 dark:border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="reveal reveal-up flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
+        <div className="reveal reveal-up flex flex-col md:flex-row justify-between items-end gap-6 md:gap-10 mb-10 md:mb-20">
           <div className="max-w-xl text-left">
-            <h4 className="text-primary font-black uppercase tracking-[0.4em] text-sm mb-6">Client Love</h4>
-            <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tighter leading-none">
+            <h4 className="text-primary font-black uppercase tracking-[0.4em] text-xs md:text-sm mb-4 md:mb-6">Client Love</h4>
+            <h2 className="text-4xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tighter leading-none">
               HAPPY <span className="text-primary italic font-serif">Brides</span>
             </h2>
           </div>

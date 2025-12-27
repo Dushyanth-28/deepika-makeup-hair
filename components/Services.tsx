@@ -7,24 +7,24 @@ const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   return (
-    <section id="services" className="py-24 bg-white dark:bg-darkBg transition-colors duration-500 overflow-hidden">
+    <section id="services" className="py-12 md:py-24 bg-white dark:bg-darkBg transition-colors duration-500 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="reveal reveal-up text-center mb-20 max-w-3xl mx-auto">
-          <h4 className="text-primary font-black uppercase tracking-[0.4em] text-sm mb-4">What We Do</h4>
-          <h2 className="text-4xl md:text-7xl font-black text-gray-900 dark:text-white mb-6 tracking-tighter">OUR SERVICES</h2>
+        <div className="reveal reveal-up text-center mb-10 md:mb-20 max-w-3xl mx-auto">
+          <h4 className="text-primary font-black uppercase tracking-[0.4em] text-xs md:text-sm mb-4">What We Do</h4>
+          <h2 className="text-4xl md:text-7xl font-black text-gray-900 dark:text-white mb-4 md:mb-6 tracking-tighter">OUR SERVICES</h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg md:text-xl leading-relaxed font-medium">
             From traditional weddings to party looks, we make you look your best.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-8 md:pb-0 hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
           {SERVICES.map((s, i) => (
             <div
               key={s.id}
-              className="reveal reveal-up group relative flex flex-col bg-gray-50 dark:bg-surface border border-gray-100 dark:border-white/5 rounded-[3rem] overflow-hidden hover:border-primary/50 transition-all duration-700 hover:-translate-y-3 shadow-sm hover:shadow-2xl"
+              className="reveal reveal-up group relative flex flex-col bg-gray-50 dark:bg-surface border border-gray-100 dark:border-white/5 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden hover:border-primary/50 transition-all duration-700 hover:-translate-y-3 shadow-sm hover:shadow-2xl min-w-[85vw] md:min-w-0 snap-center"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="h-56 overflow-hidden relative">
+              <div className="h-48 md:h-56 overflow-hidden relative">
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
                 <img
                   src={s.imageUrl}
@@ -33,20 +33,20 @@ const Services: React.FC = () => {
                 />
               </div>
 
-              <div className="p-10 flex flex-col flex-grow">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="size-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shadow-inner">
-                    <span className="material-symbols-outlined text-3xl font-bold">{s.icon}</span>
+              <div className="p-6 md:p-10 flex flex-col flex-grow">
+                <div className="flex items-center justify-between mb-4 md:mb-6">
+                  <div className="size-12 md:size-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary shadow-inner">
+                    <span className="material-symbols-outlined text-2xl md:text-3xl font-bold">{s.icon}</span>
                   </div>
-                  <span className="text-xs font-black text-primary uppercase tracking-widest">{s.price}</span>
+                  <span className="text-[10px] md:text-xs font-black text-primary uppercase tracking-widest">{s.price}</span>
                 </div>
 
-                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 tracking-tight leading-none">{s.title}</h3>
-                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8 flex-grow font-medium">{s.description}</p>
+                <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white mb-3 md:mb-4 tracking-tight leading-none">{s.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 md:mb-8 flex-grow font-medium line-clamp-3 md:line-clamp-none">{s.description}</p>
 
                 <button
                   onClick={() => setSelectedService(s)}
-                  className="w-full py-4 rounded-2xl border-2 border-primary/20 dark:border-white/10 text-primary dark:text-white font-black text-sm uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3 md:py-4 rounded-2xl border-2 border-primary/20 dark:border-white/10 text-primary dark:text-white font-black text-xs md:text-sm uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all flex items-center justify-center gap-2"
                 >
                   Learn More
                   <span className="material-symbols-outlined text-lg">info</span>
