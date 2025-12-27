@@ -11,15 +11,21 @@ const Testimonials: React.FC = () => {
           <h2 className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white tracking-tighter">OUR BEAUTIFUL <br /><span className="text-primary italic font-serif">Muses</span></h2>
         </div>
 
+        {/* Mobile Swipe Indicator */}
+        <div className="md:hidden flex items-center justify-center gap-2 text-gray-400 text-xs font-bold uppercase tracking-widest mb-6 animate-pulse">
+          <span className="material-symbols-outlined text-lg">swipe_left</span>
+          Swipe to explore
+        </div>
+
         <div className="flex overflow-x-auto gap-8 pb-16 hide-scrollbar snap-x snap-mandatory px-4 md:px-0">
           {TESTIMONIALS.map((test, i) => (
-            <div 
+            <div
               key={test.id}
               className="reveal reveal-up snap-center shrink-0 w-[320px] md:w-[500px] bg-gray-50 dark:bg-surface border border-gray-100 dark:border-white/5 p-12 rounded-[3rem] relative overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700"
               style={{ transitionDelay: `${i * 150}ms` }}
             >
               <div className="absolute top-0 right-0 size-48 bg-primary/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
-              
+
               <div className="flex gap-1 text-primary mb-8">
                 {[...Array(test.rating)].map((_, i) => (
                   <span key={i} className="material-symbols-outlined fill-1 text-lg">star</span>
@@ -31,9 +37,9 @@ const Testimonials: React.FC = () => {
               </blockquote>
 
               <div className="flex items-center gap-5 relative z-10 pt-8 border-t border-gray-200 dark:border-white/10">
-                <img 
-                  src={test.avatarUrl} 
-                  alt={test.name} 
+                <img
+                  src={test.avatarUrl}
+                  alt={test.name}
                   className="size-16 rounded-full object-cover border-2 border-primary/20 shadow-lg"
                 />
                 <div>

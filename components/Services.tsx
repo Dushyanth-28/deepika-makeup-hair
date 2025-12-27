@@ -17,11 +17,17 @@ const Services: React.FC = () => {
           </p>
         </div>
 
+        {/* Mobile Swipe Indicator */}
+        <div className="md:hidden flex items-center justify-center gap-2 text-gray-400 text-xs font-bold uppercase tracking-widest mb-6 animate-pulse">
+          <span className="material-symbols-outlined text-lg">swipe_left</span>
+          Swipe to explore
+        </div>
+
         <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 pb-8 md:pb-0 hide-scrollbar -mx-6 px-6 md:mx-0 md:px-0">
           {SERVICES.map((s, i) => (
             <div
               key={s.id}
-              className="reveal reveal-up group relative flex flex-col bg-gray-50 dark:bg-surface border border-gray-100 dark:border-white/5 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden hover:border-primary/50 transition-all duration-700 hover:-translate-y-3 shadow-sm hover:shadow-2xl min-w-[85vw] md:min-w-0 snap-center"
+              className="reveal reveal-up group relative flex flex-col bg-gray-50 dark:bg-surface border border-gray-100 dark:border-white/5 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden hover:border-primary/50 transition-all duration-700 hover:-translate-y-3 shadow-sm hover:shadow-2xl min-w-[80vw] md:min-w-0 snap-center"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="h-48 md:h-56 overflow-hidden relative">

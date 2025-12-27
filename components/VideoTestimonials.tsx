@@ -40,6 +40,12 @@ const VideoTestimonials: React.FC = () => {
           </div>
         </div>
 
+        {/* Mobile Swipe Indicator */}
+        <div className="md:hidden flex items-center gap-2 text-gray-400 text-xs font-bold uppercase tracking-widest mb-6 animate-pulse">
+          <span className="material-symbols-outlined text-lg">swipe_left</span>
+          Swipe to explore
+        </div>
+
         <div
           ref={scrollRef}
           className="flex gap-8 overflow-x-auto pb-12 hide-scrollbar snap-x snap-mandatory px-2 md:px-0"
