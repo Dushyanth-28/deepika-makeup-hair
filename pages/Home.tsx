@@ -5,6 +5,7 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Transformations from '../components/Transformations';
 import Testimonials from '../components/Testimonials';
+import VideoTestimonials from '../components/VideoTestimonials';
 import { Page } from '../App';
 
 interface HomeProps {
@@ -21,6 +22,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       <Portfolio limit={3} onNavigate={onNavigate} />
       
       <Transformations />
+      
+      {/* New Video Testimonials Section */}
+      <VideoTestimonials />
+
       <Testimonials />
       
       {/* CTA Section Optimized for Light Mode */}

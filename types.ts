@@ -35,3 +35,11 @@ export interface Testimonial {
   avatarUrl: string;
   rating: number;
 }
+
+export interface VideoTestimonial {
+  id: string;
+  name: string;
+  videoUrl: string;
+  thumbnailUrl: string;
+  shortQuote: string;
+}

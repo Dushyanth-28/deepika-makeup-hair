@@ -1,5 +1,5 @@
 
-import { Service, Transformation, PortfolioItem, Testimonial } from './types';
+import { Service, Transformation, PortfolioItem, Testimonial, VideoTestimonial } from './types';
 
 export const SERVICES: Service[] = [
   {
@@ -222,5 +222,43 @@ export const TESTIMONIALS: Testimonial[] = [
     content: "Needed a clean, powerful look for my TEDx talk. Anjali delivered a professional style that felt like 'me' but elevated.",
     avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop',
     rating: 5
+  }
+];
+
+export const VIDEO_TESTIMONIALS: VideoTestimonial[] = [
+  {
+    id: 'vt1',
+    name: 'Megha S.',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-beautiful-woman-smiling-at-the-camera-4061-large.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=500&auto=format&fit=crop',
+    shortQuote: 'My wedding look was exactly how I dreamed it!'
+  },
+  {
+    id: 'vt2',
+    name: 'Riya Kapoor',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-girl-with-blue-eyes-smiling-at-camera-3211-large.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?q=80&w=500&auto=format&fit=crop',
+    shortQuote: 'Anjali is the best for editorial glam. Five stars!'
+  },
+  {
+    id: 'vt3',
+    name: 'Sanya Mirza',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-portrait-of-a-woman-smiling-at-the-camera-4361-large.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1623091410901-00e2d268901f?q=80&w=500&auto=format&fit=crop',
+    shortQuote: 'The HD finish stayed for 16 hours straight.'
+  },
+  {
+    id: 'vt4',
+    name: 'Ananya Roy',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-fashion-portrait-of-a-woman-in-a-studio-setting-4202-large.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=500&auto=format&fit=crop',
+    shortQuote: 'Simply flawless. Best investment for my big day.'
+  },
+  {
+    id: 'vt5',
+    name: 'Sneha Jain',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-young-woman-with-smiling-face-3243-large.mp4',
+    thumbnailUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=500&auto=format&fit=crop',
+    shortQuote: 'The studio vibe is so premium and relaxing.'
   }
 ];
